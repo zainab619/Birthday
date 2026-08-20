@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, my handsome man 🤍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fdf6f0; /* لون البيج الأساسي */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* طبقة الخلفية المتحركة (النجوم المعدلة) */
+        .moving-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            
+            background-image: 
+                radial-gradient(#f3dcd1 2px, transparent 2px), /* نقاط بيج أغمق و أوضح */
+                radial-gradient(#ffffff 1.5px, transparent 1.5px), /* نقاط بيضاء أوضح */
+                radial-gradient(#f3dcd1 2px, transparent 2px);
+            
+            background-size: 40px 40px, 30px 30px, 50px 50px; 
+            background-position: 0 0, 15px 15px, 25px 25px;
+            animation: moveStars 40s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes moveStars {
+            from { background-position: 0 0, 15px 15px, 25px 25px; }
+            to { background-position: 500px 500px, 515px 515px, 525px 525px; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 45px;
+            letter-spacing: 2.5px;
+            color: #4a3121;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        .gift-btn {
+            background: #fff;
+            border: 2px solid #e0cfc2;
+            color: #5c4033;
+            padding: 20px 45px;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1.5s ease 0.5s forwards;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(92, 64, 51, 0.2);
+        }
+
+        .gift-btn:hover {
+            background: #fbeae1;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(92, 64, 51, 0.3);
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="moving-background"></div>
+
+    <div class="container">
+        <h1>Happy Birthday, my handsome man 🤍</h1>
+        <button class="gift-btn" onclick="openGift()">افتح هديتك 🎁</button>
+    </div>
+
+    <script>
+        function openGift() {
+            window.location.href = 'message.html';
+        }
+    </script>
+
+</body>
+</html>

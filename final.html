@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Real Gift 🤍</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fdf6f0;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px 20px;
+
+            position: relative;
+            overflow-x: hidden;
+        }
+
+
+        /* ========================= */
+        /* BACKGROUND */
+        /* ========================= */
+
+        .moving-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            z-index: -1;
+
+            background-image:
+                radial-gradient(#f3dcd1 2px, transparent 2px),
+                radial-gradient(#ffffff 1.5px, transparent 1.5px),
+                radial-gradient(#f3dcd1 2px, transparent 2px);
+
+            background-size:
+                40px 40px,
+                30px 30px,
+                50px 50px;
+
+            background-position:
+                0 0,
+                15px 15px,
+                25px 25px;
+
+            animation: moveStars 40s linear infinite;
+
+            opacity: 0.8;
+        }
+
+
+        @keyframes moveStars {
+
+            from {
+                background-position:
+                    0 0,
+                    15px 15px,
+                    25px 25px;
+            }
+
+            to {
+                background-position:
+                    500px 500px,
+                    515px 515px,
+                    525px 525px;
+            }
+
+        }
+
+
+        /* ========================= */
+        /* MAIN CARD */
+        /* ========================= */
+
+        .final-card {
+
+            background-color: rgba(255,255,255,0.85);
+
+            border: 2px solid #e0cfc2;
+
+            padding: 40px 30px;
+
+            border-radius: 30px;
+
+            max-width: 550px;
+
+            width: 100%;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.08);
+
+            backdrop-filter: blur(10px);
+
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        h2 {
+
+            color: #4a3121;
+
+            font-size: 1.8rem;
+
+            margin-bottom: 20px;
+
+            font-weight: 400;
+        }
+
+
+        .audio-hint {
+
+            color: #7a5c4d;
+
+            font-size: 1.05rem;
+
+            margin-bottom: 25px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ========================= */
+        /* AUDIO */
+        /* ========================= */
+
+        audio {
+
+            width: 100%;
+
+            margin-bottom: 25px;
+
+            border-radius: 30px;
+        }
+
+
+        /* ========================= */
+        /* CAKE SECTION */
+        /* ========================= */
+
+        #cakeSection {
+
+            display: none;
+
+            margin-top: 20px;
+
+            animation: cakeAppear 1s ease forwards;
+        }
+
+
+        @keyframes cakeAppear {
+
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+
+        }
+
+
+        .cake-title {
+
+            color: #5c4033;
+
+            font-size: 1.2rem;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ========================= */
+        /* CAKE */
+        /* ========================= */
+
+        .cake {
+
+            position: relative;
+
+            width: 260px;
+
+            height: 220px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-end;
+        }
+
+
+        /* cake bottom */
+
+        .cake-body {
+
+            position: absolute;
+
+            bottom: 15px;
+
+            width: 220px;
+
+            height: 105px;
+
+            background: #e9b9a6;
+
+            border-radius:
+                15px 15px 20px 20px;
+
+            box-shadow:
+                inset 0 -10px 0 rgba(92,64,51,0.08);
+        }
+
+
+        /* cake top */
+
+        .cake-top {
+
+            position: absolute;
+
+            bottom: 95px;
+
+            width: 220px;
+
+            height: 55px;
+
+            background: #f7d8cb;
+
+            border-radius: 50%;
+        }
+
+
+        /* cream */
+
+        .cream {
+
+            position: absolute;
+
+            bottom: 78px;
+
+            width: 220px;
+
+            height: 35px;
+
+            background: #fff;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 8px 0 #fff;
+        }
+
+
+        /* little cream drops */
+
+        .cream::before,
+        .cream::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 20px;
+
+            height: 25px;
+
+            background: white;
+
+            border-radius: 0 0 15px 15px;
+
+            bottom: -15px;
+        }
+
+
+        .cream::before {
+
+            left: 45px;
+        }
+
+
+        .cream::after {
+
+            right: 45px;
+        }
+
+
+        /* ========================= */
+        /* CANDLES */
+        /* ========================= */
+
+        .candles {
+
+            position: absolute;
+
+            bottom: 125px;
+
+            width: 205px;
+
+            height: 75px;
+
+            display: flex;
+
+            justify-content: space-around;
+
+            align-items: flex-end;
+
+            z-index: 5;
+        }
+
+
+        .candle {
+
+            position: relative;
+
+            width: 7px;
+
+            height: 48px;
+
+            background: #d6a68f;
+
+            border-radius: 5px;
+
+            transition:
+                opacity 0.4s ease,
+                transform 0.4s ease;
+        }
+
+
+        /* flame */
+
+        .flame {
+
+            position: absolute;
+
+            width: 10px;
+
+            height: 16px;
+
+            background: #f4b860;
+
+            border-radius:
+                50% 50% 50% 50%;
+
+            top: -15px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%)
+                rotate(45deg);
+
+            box-shadow:
+                0 0 10px rgba(244,184,96,0.7);
+
+            animation: flicker 0.8s infinite alternate;
+        }
+
+
+        @keyframes flicker {
+
+            from {
+
+                transform:
+                    translateX(-50%)
+                    rotate(40deg)
+                    scale(0.9);
+            }
+
+            to {
+
+                transform:
+                    translateX(-50%)
+                    rotate(50deg)
+                    scale(1.1);
+            }
+
+        }
+
+
+        .candle.off {
+
+            opacity: 0;
+
+            transform:
+                translateY(-15px)
+                scale(0.4);
+        }
+
+
+        .candle.off .flame {
+
+            display: none;
+        }
+
+
+        /* ========================= */
+        /* MESSAGE */
+        /* ========================= */
+
+        #blowMessage {
+
+            display: none;
+
+            color: #5c4033;
+
+            font-size: 1.15rem;
+
+            line-height: 1.7;
+
+            margin-top: 20px;
+
+            animation: messageAppear 0.8s ease;
+        }
+
+
+        @keyframes messageAppear {
+
+            from {
+
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* ========================= */
+        /* MIC BUTTON */
+        /* ========================= */
+
+        #micButton {
+
+            display: none;
+
+            margin-top: 18px;
+
+            background: #5c4033;
+
+            color: white;
+
+            border: none;
+
+            padding: 13px 28px;
+
+            border-radius: 30px;
+
+            font-size: 1rem;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        #micButton:hover {
+
+            background: #4a3121;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ========================= */
+        /* FINAL MESSAGE */
+        /* ========================= */
+
+        #finalMessage {
+
+            display: none;
+
+            margin-top: 25px;
+
+            padding-top: 25px;
+
+            border-top: 2px dashed #ebd5c8;
+
+            color: #5c4033;
+
+            font-size: 1.45rem;
+
+            font-weight: 500;
+
+            animation: finalAppear 1.2s ease forwards;
+        }
+
+
+        @keyframes finalAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.8);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* ========================= */
+        /* CONFETTI */
+        /* ========================= */
+
+        .confetti {
+
+            position: fixed;
+
+            width: 8px;
+
+            height: 12px;
+
+            top: -20px;
+
+            z-index: 100;
+
+            animation:
+                fall 3s linear forwards;
+        }
+
+
+        @keyframes fall {
+
+            to {
+
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+
+                opacity: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="moving-background"></div>
+
+
+<div class="final-card">
+
+
+    <h2>
+        last gift is here 🎁
+    </h2>
+
+
+    <p class="audio-hint">
+        Just for my handsome baby 🤍🎙️
+    </p>
+
+
+    <!-- AUDIO -->
+
+    <audio id="birthdayAudio" controls>
+
+        <source
+            src="audio.mp3"
+            type="audio/mp3"
+        >
+
+        متصفحك ما يدعم تشغيل الصوت، معليش جرب جهاز ثاني!
+
+    </audio>
+
+
+    <!-- ========================= -->
+    <!-- CAKE -->
+    <!-- ========================= -->
+
+    <div id="cakeSection">
+
+
+        <div class="cake-title">
+
+            🎂 22 candles for you 🤍
+
+        </div>
+
+
+        <div class="cake">
+
+
+            <div class="cake-body"></div>
+
+            <div class="cake-top"></div>
+
+            <div class="cream"></div>
+
+
+            <div
+                class="candles"
+                id="candles"
+            ></div>
+
+
+        </div>
+
+
+        <div id="blowMessage">
+
+            انفخ الشموع وتمنى أمنية 💕
+
+        </div>
+
+
+        <button
+            id="micButton"
+            onclick="startListening()"
+        >
+
+            🎤 جاهز؟ اضغط هنا عشان تنفخ على الشموع
+
+        </button>
+
+
+        <div id="finalMessage">
+
+            I wish it comes true 💋
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* ========================= */
+/* VARIABLES */
+/* ========================= */
+
+
+const audio =
+    document.getElementById("birthdayAudio");
+
+
+const cakeSection =
+    document.getElementById("cakeSection");
+
+
+const candlesContainer =
+    document.getElementById("candles");
+
+
+const blowMessage =
+    document.getElementById("blowMessage");
+
+
+const micButton =
+    document.getElementById("micButton");
+
+
+const finalMessage =
+    document.getElementById("finalMessage");
+
+
+let candlesLeft = 22;
+
+let audioFinished = false;
+
+let listening = false;
+
+let audioContext;
+
+let analyser;
+
+let microphone;
+
+let dataArray;
+
+
+/* ========================= */
+/* CREATE 22 CANDLES */
+/* ========================= */
+
+
+for (let i = 0; i < 22; i++) {
+
+
+    const candle =
+        document.createElement("div");
+
+
+    candle.className = "candle";
+
+
+    const flame =
+        document.createElement("div");
+
+
+    flame.className = "flame";
+
+
+    candle.appendChild(flame);
+
+
+    candlesContainer.appendChild(candle);
+
+}
+
+
+/* ========================= */
+/* SHOW CAKE WHEN AUDIO STARTS */
+/* ========================= */
+
+
+audio.addEventListener("play", function () {
+
+    cakeSection.style.display = "block";
+
+});
+
+
+/* ========================= */
+/* AUDIO FINISHED */
+/* ========================= */
+
+
+audio.addEventListener("ended", function () {
+
+
+    audioFinished = true;
+
+
+    blowMessage.style.display = "block";
+
+
+    micButton.style.display = "inline-block";
+
+
+});
+
+
+/* ========================= */
+/* START MICROPHONE */
+/* ========================= */
+
+
+async function startListening() {
+
+
+    if (!audioFinished) {
+
+        return;
+
+    }
+
+
+    try {
+
+
+        const stream =
+            await navigator.mediaDevices.getUserMedia({
+                audio: true
+            });
+
+
+        audioContext =
+            new (
+                window.AudioContext ||
+                window.webkitAudioContext
+            )();
+
+
+        analyser =
+            audioContext.createAnalyser();
+
+
+        microphone =
+            audioContext.createMediaStreamSource(stream);
+
+
+        microphone.connect(analyser);
+
+
+        analyser.fftSize = 256;
+
+
+        const bufferLength =
+            analyser.frequencyBinCount;
+
+
+        dataArray =
+            new Uint8Array(bufferLength);
+
+
+        listening = true;
+
+
+        micButton.innerText =
+            "  👀 انفخ على الشاشة!🎤 نفخة فعليه مو مجازية ";
+
+
+        micButton.disabled = true;
+
+
+        detectBlow();
+
+
+    }
+
+
+    catch (error) {
+
+
+        blowMessage.innerHTML =
+            "ما قدرت أسمعك 😭<br>" +
+            "اضغط سماح للمايك وجرب مرة ثانية 🤍";
+
+
+    }
+
+}
+
+
+/* ========================= */
+/* DETECT BLOW */
+/* ========================= */
+
+
+function detectBlow() {
+
+
+    if (!listening) {
+
+        return;
+
+    }
+
+
+    analyser.getByteFrequencyData(dataArray);
+
+
+    let total = 0;
+
+
+    for (let i = 0; i < dataArray.length; i++) {
+
+        total += dataArray[i];
+
+    }
+
+
+    const average =
+        total / dataArray.length;
+
+
+    /*
+        كل ما كان الصوت قوي،
+        نعتبرها نفخة.
+    */
+
+
+    if (average > 45) {
+
+
+        blowOutCandles();
+
+
+        /*
+            ننتظر شوي قبل ما نسمح
+            بنفخة ثانية.
+        */
+
+        setTimeout(() => {
+
+            requestAnimationFrame(detectBlow);
+
+        }, 700);
+
+
+        return;
+
+    }
+
+
+    requestAnimationFrame(detectBlow);
+
+}
+
+
+/* ========================= */
+/* TURN OFF CANDLES */
+/* ========================= */
+
+
+function blowOutCandles() {
+
+
+    if (candlesLeft <= 0) {
+
+        return;
+
+    }
+
+
+    /*
+        كل نفخة تطفي 2 شموع تقريبًا
+    */
+
+    const amount =
+        Math.min(
+            Math.floor(Math.random() * 3) + 2,
+            candlesLeft
+        );
+
+
+    const candles =
+        document.querySelectorAll(".candle");
+
+
+    for (
+        let i = 0;
+        i < candles.length;
+        i++
+    ) {
+
+
+        if (
+            !candles[i].classList.contains("off")
+            &&
+            candlesLeft > 0
+        ) {
+
+
+            candles[i]
+                .classList
+                .add("off");
+
+
+            candlesLeft--;
+
+        }
+
+
+        if (candlesLeft ===
+            Math.max(0, candlesLeft - amount)
+        ) {
+
+            break;
+
+        }
+
+    }
+
+
+    /*
+        نتأكد فعليًا من عدد الشموع
+    */
+
+    let offCount = 0;
+
+
+    candles.forEach(candle => {
+
+        if (
+            candle.classList.contains("off")
+        ) {
+
+            offCount++;
+
+        }
+
+    });
+
+
+    candlesLeft =
+        22 - offCount;
+
+
+    if (candlesLeft === 0) {
+
+        finishBirthday();
+
+    }
+
+}
+
+
+/* ========================= */
+/* ALL CANDLES OFF */
+/* ========================= */
+
+
+function finishBirthday() {
+
+
+    listening = false;
+
+
+    if (audioContext) {
+
+        audioContext.close();
+
+    }
+
+
+    micButton.style.display =
+        "none";
+
+
+    blowMessage.style.display =
+        "none";
+
+
+    finalMessage.style.display =
+        "block";
+
+
+    createConfetti();
+
+}
+
+
+/* ========================= */
+/* CONFETTI */
+/* ========================= */
+
+
+function createConfetti() {
+
+
+    for (let i = 0; i < 45; i++) {
+
+
+        const piece =
+            document.createElement("div");
+
+
+        piece.className =
+            "confetti";
+
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+
+        piece.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+
+        piece.style.background =
+            [
+                "#e9b9a6",
+                "#d6a68f",
+                "#f3dcd1",
+                "#ffffff",
+                "#cbb4a3"
+            ][
+                Math.floor(
+                    Math.random() * 5
+                )
+            ];
+
+
+        document.body.appendChild(piece);
+
+
+        setTimeout(() => {
+
+            piece.remove();
+
+        }, 4000);
+
+    }
+
+}
+
+
+</script>
+
+
+</body>
+</html>

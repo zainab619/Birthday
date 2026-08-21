@@ -342,7 +342,7 @@
 
         <div class="secret-content">
 
-            <h2>Wait... 👀</h2>
+            <h2>دقيقة... 👀</h2>
 
             <p>
                 You didn't think that was the end, did you? 🌚
@@ -351,13 +351,13 @@
             <p>
                 باقي شي واحد  ...
                 <br>
-                But first, prove you're really you. 🤨
+                بس اول شي اثبت ان انت ابراهيم. 🤨
             </p>
 
             <p class="secret-hint">
                 You already know the answer.
                 <br>
-                 تلميح : لقب انت اخترته لنا😌
+                 تلميح : لقب
             </p>
 
             <input
@@ -495,7 +495,32 @@
 
 
         /* التحقق من كلمة السر */
+function checkSecret() {
 
+    const input = document
+        .getElementById('secretInput')
+        .value
+        .trim();
+
+    const message = document.getElementById('secretMessage');
+    const finalButton = document.getElementById('finalButton');
+
+    const normalizedInput = input.replace(/\s+/g, '');
+
+    
+    if (normalizedInput === "هالند" || normalizedInput === "هالاند") {
+
+        message.innerHTML =
+            "هالاند !!!! 😐😐<br>" +
+            "Bro, be for real. I literally hate it. " +
+            "Why would I put it as a secret key? 😐😐<br>" +
+            "حاول مرة ثانية 🙄🙄";
+
+        message.style.color = "#5c4033";
+        finalButton.style.display = "none";
+
+        return;
+    }
         function checkSecret() {
 
             const input = document
